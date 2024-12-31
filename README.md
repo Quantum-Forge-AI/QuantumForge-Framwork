@@ -70,7 +70,7 @@ pip install QuantumForge
 Define Jobs and/or handlers **➔** Create a commander to run them 
 
 ## QuantumForge Workflow Demonstration Example
-![QuantumForge workflow demonstration animation](docs/agere_hierarchical_structure.png))
+![QuantumForge workflow demonstration animation](docs/agere_getting_started_animation.gif))
 
 Above is a simple demonstration animation of a conversational agent's workflow that can call upon tools,
 briefly illustrating the principles of QuantumForge.
@@ -83,7 +83,7 @@ Lastly, a commander is utilized to execute it.
 For a detailed tutorial on it, please see 
 
 ## Architecture Overview
-![QuantumForge_architecture](https://github.com/Multi-Agent-sol/QuantumForge-Framwork/blob/main/docs/agere_hierarchical_structure.png)
+![QuantumForge_architecture](docs/agere_hierarchical_structure.png)
 
 ## Basic Concepts
 
