@@ -1,0 +1,100 @@
+site_name: Cyberforge
+copyright: Copyright (c) 2023 Xueao Chao
+
+repo_url: https://github.com/happyapplehorse/Cyberforge
+repo_name: happyapplehorse/Cyberforge
+
+theme:
+  name: "material"
+  
+  icon:
+    logo: material/island
+  
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tracking
+    - navigation.path
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - navigation.tabs.sticky
+    - navigation.prune
+    - toc.follow
+    - search.suggest
+    - search.hightlight
+    - content.code.copy
+    - content.code.annotate
+
+plugins:
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/happyapplehorse
+      name: Github
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - Home: index.md
+  - Tutorial:
+    - Introduction: introduction.md
+    - Getting started: getting_started.md
+  - Guide:
+    - guide/commander/framework.md
+    - TaskNode: guide/commander/tasknode.md
+    - Commander: guide/commander/commander.md
+    - Job: guide/commander/job.md
+    - handler: guide/commander/handler.md
+    - callbacks: guide/commander/callback.md
+    - node-edge pattern: guide/commander/node_edge.md
+  - API:
+    - api/index.md
+    - Commander:
+      - api/commander/index.md
+      - api/commander/commander.md
+      - api/commander/node_edge.md
+    - Utils:
+      - api/utils/index.md
+      - prompt_template: api/utils/prompt_template.md
+      - context: api/utils/context.md
+      - tool: api/utils/tool.md
+      - llm_async_converters: api/utils/llm_async_converters.md
+      - dispatcher: api/utils/dispatcher.md
+    - Addons:
+      - api/addons/index.md
+      - qdrant_vector: api/addons/qdrant_vector.md
+      - text_splitter: api/addons/text_splitter.md
